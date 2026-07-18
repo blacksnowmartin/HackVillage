@@ -11,7 +11,7 @@ export default function HomePage() {
       </p>
       <div className="actions">
         <Link className="btn primary" href="/events">
-          Browse events
+          Browse public events
         </Link>
         <Link className="btn" href="/offline">
           Offline fallback

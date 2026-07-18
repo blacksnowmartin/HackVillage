@@ -31,7 +31,15 @@ async function main() {
 
   const event = await prisma.event.upsert({
     where: { slug: "nairobi-climate-sprint" },
-    update: {},
+    update: {
+      title: "Nairobi Climate Sprint",
+      problemStatement:
+        "Build tools that help Kenyan communities track and reduce local emissions.",
+      status: "PRIZE_VERIFIED",
+      prizePoolKes: 500000,
+      startsAt: new Date("2026-08-01T09:00:00.000Z"),
+      endsAt: new Date("2026-08-03T17:00:00.000Z"),
+    },
     create: {
       slug: "nairobi-climate-sprint",
       title: "Nairobi Climate Sprint",
@@ -39,6 +47,8 @@ async function main() {
         "Build tools that help Kenyan communities track and reduce local emissions.",
       status: "PRIZE_VERIFIED",
       prizePoolKes: 500000,
+      startsAt: new Date("2026-08-01T09:00:00.000Z"),
+      endsAt: new Date("2026-08-03T17:00:00.000Z"),
       organizerId: organizer.id,
       escrowVault: {
         create: {

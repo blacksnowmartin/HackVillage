@@ -136,6 +136,8 @@ npm run db:seed
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+For a shorter bootstrap checklist, see [LOCAL_SETUP.md](LOCAL_SETUP.md).
+
 ---
 
 ## Project Structure

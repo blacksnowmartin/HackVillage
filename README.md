@@ -255,7 +255,27 @@ The codebase is split so frontend and backend contributors can work in parallel:
 HackVillage/
 ├── frontend/     # Next.js 14 App Router UI + PWA + Route Handlers
 ├── backend/      # Prisma/PostgreSQL, escrow & payout services, ledger stubs
-└── tests/        # Unit tests (vitest)
+├── tests/        # Unit tests (vitest)
+└── LOCAL_SETUP.md # Fast local bootstrap notes
+```
+
+### Local bootstrap
+
+For the fastest local run:
+
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+The public pages and health endpoint should be available at http://localhost:3000.
+
+If you want Prisma-backed seed data as well, ensure PostgreSQL is running and then:
+
+```bash
+npm run db:migrate
+npm run db:seed
 ```
 
 | Area | Docs |

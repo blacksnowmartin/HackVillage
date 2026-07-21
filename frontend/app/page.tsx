@@ -13,6 +13,17 @@ export default function HomePage() {
         <Link className="btn primary" href="/events">
           Browse public events
         </Link>
+        <Link className="btn" href="/developers">
+          For developers
+        </Link>
+        <Link className="btn" href="/organizers">
+          For organizers
+        </Link>
+      </div>
+      <div className="actions" style={{ marginTop: "0.75rem" }}>
+        <Link className="btn" href="/about">
+          About HackVillage
+        </Link>
         <Link className="btn" href="/offline">
           Offline fallback
         </Link>
